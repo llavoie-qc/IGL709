@@ -1,0 +1,50 @@
+== IGL709
+Sujets choisis en génie logiciel
+
+=== Ingénierie des exigences [12 h]
+* Processus+modèles : DC+DFD
+* OO
+* User
+* Jackson
+* x Ontologies
+* x Méthodes formelles
+* Procédés : Comité, OOD,  ABT
+
+=== Gestion des artéfacts (organiser une visite) [4 h]
+* Versions vs Configurations
+* Logiciel vs données vs hybride
+* migration
+* déploiement
+
+=== Gestion des essais et des revues [8 h]
+* vérification vs validation
+* tests vs essais
+* type : unitaires, intégration, système
+* non-réregression
+* mode : itération, livraison, récption, pré-déploiement, déploiement
+* intégration continue
+* livraison continue
+
+=== Modalités
+* cours  24 : 12 x 2 heures (collectif)
+* étude  36 : 12 x 3 heures (collectif)
+* projet 75 à 90     heures (individuel)
+
+L’évaluation portera essentiellement sur le projet et sa présentation orale
+(30 minutes chacun).
+
+
+== Modules non retenus
+
+=== Gestion de projet
+* Cycles de vie : de l'avant-projet à la réalisation, l'évolution et le retrait
+* Gestion de produit : l'anticipation, le changement, etc.
+* Gestion de projet : la base, les vagues, etc.
+* Procédés (itératif, RUP, V, XP, agile, Kanban)
+* La spirale, première manière, deuxième et troisième
+* Évaluation vs Estimation : (paramétrique, Cocomo, FP...)
+* PMBoK vs Claude
+* Gestion du changement
+* Gestion de risque
+
+

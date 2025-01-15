@@ -1,0 +1,377 @@
+// Signature du document
+:organisation: CoFELI
+:copyright: CoFELI
+:entrepot: CoFELI
+:depot: Exemple
+:branche: v100
+:sigle: GLOGUS_DDV
+:titre: GLOGUS — Gabarits de documents pour le génie logiciel
+:sous_titre: DDV — Document de vision
+:keywords: génie logiciel, gabarit, modèle, documentation, gestion de projet
+:revnumber: 1.0.0.a
+:revdate: 2024-09-05p
+:version-label: document en cours de revue
+:author: Christina KHNAISSER
+:email: christina.khnaisser@usherbrooke.ca
+:author2: Luc LAVOIE
+:email2: luc.lavoie@usherbrooke.ca
+// TODO 2024-09-05 LL01 - Le «nouveau» GLOGUS doit-il être placé dans CoFELI ou dans CoLOED ?
+//  * CoFELI : limité à l’enseignement, dans Exemple ou Scriptorum ?
+//  * CoLOED : pour l’enseignement, la recherche et le développement, un dépôt à part entière ?
+
+// Contexte de support du document
+include::../../../rep_CoLOED_AsciiDoc.adoc[]
+:rep_Scriptorum: {rep_racine}/CoFELI/Scriptorum
+
+// Définitions locales
+// <<organisation ou personne à l’origine de la vision>>
+:glogus_commanditaire: <<organisation ou personne à l’origine de la vision>>
+// <<produit ou solution envisagée>>
+:glogus_produit: <<produit ou solution envisagée>>
+// Sections du DDV activées ou non (défini -> actif, non défini -> inactif)
+:glogus_complet: actif
+:glogus_glossaire: actif
+
+// Document bimodal PDF (texte, diaporama) et HTML5 (hypertexte).
+// Les attributs format_DIAPO, format_TEXTE et format_HYPER
+// permettent de particulariser le document au besoin.
+
+ifndef::format_effectif[:format_effectif: RAPPORT]
+ifdef::format_DIAPO[include::{rep_format}/DIAPO_en-tete.adoc[]]
+ifndef::format_DIAPO[include::{rep_format}/{format_effectif}_en-tete.adoc[]]
+
+// Sommaire, mise en garde, historique et table des matières
+ifndef::format_DIAPO[]
+<<<
+include::{rep_format}/SOMMAIRE.adoc[]
+// Le sommaire présente les éléments jugés essentiels à une décision basée sur
+// le document (recommandations, engagements, etc.).
+// Dans le cas d’un document de vision (relative à un produit ou un projet),
+// le sommaire devrait comprendre trois parties : une courte description
+// du contexte dans lequel se pose un problème, la description dudit problème
+// et les principales attentes qu’une solution devrait satisfaire.
+…
+
+include::{rep_format}/MISE_EN_GARDE.adoc[]
+// La mise en garde présente tout élément important en regard de la portée,
+// de l’interprétation, du statut, de l’applicabilité ou de la fiabilité du document.
+La portée telle que décrite dans le présent document n’a pas valeur fonctionnelle
+ni contractuelle.
+Un document de spécification des exigences et un énoncé de portée
+de projet suivront et rempliront ce rôle.
+
+include::{rep_format}/HISTO_debut.adoc[]
+
+| 2024-09-05
+| CK+LL
+| Ébauche initiale depuis le gabarit Word du GLOGUS v2016.
+
+include::{rep_format}/HISTO_fin.adoc[]
+
+endif::format_DIAPO[]
+
+<<<
+toc::[]
+
+// Corps du document
+<<<
+[introduction]
+== Introduction
+// Description succincte de l’objet de la vision (le produit recherché)
+// Il s’agit souvent d’une synthèse d’une partie du sommaire.
+Le présent document a pour but de partager la vision du {glogus_commanditaire}
+quant au développement du produit {glogus_produit} dont le but est de…
+
+Les principaux objectifs du présent document sont les suivants :
+
+* présenter le contexte ;
+* décrire le problème à résoudre ;
+* présenter le but et les objectifs de la démarche envisagée ;
+* définir les attentes relatives à la solution recherchée ;
+* recenser les besoins, les hypothèses et les contraintes identifiés jusqu’à présent.
+
+Le document s’adresse à toutes les parties prenantes, mais plus particulièrement
+au commanditaire, au maitre d’ouvrage, au maitre d’oeuvre, aux responsables des
+essais et au groupe d’assurance et de contrôle de la qualité.
+
+== Projet envisagé
+// Présentation générale du problème dans son contexte, en relation, notamment,
+// avec les produits, les systèmes et la structure organisationnelle.
+// La présente section sert de motivation au document.
+Le projet consiste à…
+
+=== Contexte
+// Décrire le contexte général (structure organisationnelle, parties prenantes, etc.).
+// Renvoyer aux sous-sections subséquentes au besoin.
+…
+
+=== Problématique
+// Décrire comment se pose le problème, comment il est perçu, l’impact sur
+// l’organisation et ses processus.
+…
+
+=== But et objectifs
+// Décrire le but, les objectifs qui en découlent et les attentes exprimées ou pressenties.
+…
+
+ifdef::glogus_complet[]
+=== Parties prenantes
+// Plusieurs auteurs proposent de placer ici un diagramme présentant l’ensemble
+// des parties prenantes, les sections subséquentes les décrivant plus en détail.
+// Ce diagramme est analogue à un diagramme de contexte, sans en être un puisque
+// seuls les agents relatifs au système à être développé y figurent.
+// Ceci peut donc entrainer une certaine confusion.
+// Pour cette raison, nous ne recommandons pas cette pratique.
+// Nous ne la condamnons pas non plus.
+…
+
+==== Organisations
+// Maitre d’ouvrage, commanditaires, clients, etc.
+…
+
+===== Organisation 1
+// Présentation générale de l’organisation.
+…
+
+.Structure
+// Description de la structure interne (organigramme).
+// Liens entre les éléments de la problématique et les différents éléments de
+// cette structure.
+// Liens entre un éventuel projet de mise en oeuvre d’une solution
+// et les différents éléments de cette structure.
+…
+
+.Distribution géographique
+// Description facultative des composantes de l’organisation selon leur emplacement
+// géographique (impératif si cette distribution a un impact sur le problème,
+// la solution ou un éventuel projet de mise en oeuvre de la solution).
+…
+
+===== Organisation 2
+// Présentation générale de l’organisation.
+…
+
+.Structure
+// Description de la structure interne (organigramme).
+// Liens entre les éléments de la problématique et les différents éléments de
+// cette structure.
+// Liens entre un éventuel projet de mise en oeuvre d’une solution
+// et les différents éléments de cette structure.
+…
+
+.Distribution géographique
+// Description facultative des composantes de l’organisation selon leur emplacement
+// géographique (impératif si cette distribution a un impact sur le problème,
+// la solution ou un éventuel projet de mise en oeuvre de la solution).
+…
+
+==== Acteurs
+// Mandataires, utilisateurs, exploitants, etc.
+…
+
+===== Acteur 1
+// Caractérisation de l’acteur.
+// Liens entre les éléments de la problématique et l’acteur.
+// Liens entre un éventuel projet de mise en oeuvre d’une solution et l’acteur.
+…
+
+===== Acteur 2
+// Caractérisation de l’acteur.
+// Liens entre les éléments de la problématique et l’acteur.
+// Liens entre un éventuel projet de mise en oeuvre d’une solution et l’acteur.
+…
+
+==== Autres parties prenantes
+// Caractérisation des autres parties prenantes, voire des parties intéressées.
+…
+endif::glogus_complet[]
+
+=== Besoins
+Les principaux besoins recensés à ce jour sont les suivants :
+
+.BE.01 — énoncé du besoin 1…
+
+* premier aspect…  ;
+* …  ;
+* dernier aspect.
+
+.BE.02 — énoncé du besoin 2…
+
+* premier aspect…  ;
+* …  ;
+* dernier aspect.
+
+// Les besoins… sont considérés comme prioritaires.
+// La satisfaction du BE.01 est préalable à celle du BE.02.
+
+== Produit recherché
+// Vision globale du produit
+…
+
+=== Caractérisation
+// Présentation du produit en regard des objectifs organisationnels
+// * Pour qui ?
+// * Pour (faire) quoi ?
+// * Pourquoi ?
+// * Comment ?
+…
+
+=== Services touchés
+// Inventaire des entités organisationnelles touchées par
+// * le démarrage du projet,
+// * l’exécution du projet,
+// * le développement du produit,
+// * la mise en exploitation du produit.
+…
+
+ifdef::glogus_complet[]
+=== Hypothèses
+// Au moment de l’écriture du document, certains faits peuvent ne pas avoir
+// été confirmés, mais ont néanmoins été pris en compte, ce sont les hypothèses
+Les hypothèses recensées à ce jour sont les suivantes :
+
+.HY.01 — énoncé de l’hypothèse 1…
+
+* premier aspect…  ;
+* …  ;
+* dernier aspect.
+
+.HY.02 — énoncé de l’hypothèse 2…
+
+* premier aspect…  ;
+* …  ;
+* dernier aspect.
+
+=== Contraintes
+// D’autres faits issus d’agents extérieurs au projet doivent être pris en compte,
+// car ils sont susceptibles de limiter le choix des solutions, ce sont les contraintes.
+Les contraintes recensées à ce jour sont les suivantes :
+
+.HY.01 — énoncé de la contrainte 1…
+
+* premier aspect…  ;
+* …  ;
+* dernier aspect.
+
+.HY.02 — énoncé de la contrainte 2…
+
+* premier aspect…  ;
+* …  ;
+* dernier aspect.
+
+=== Produits analogues
+// Un développement ne doit généralement être entrepris que dans la mesure
+// où aucun produit existant ne peut remplir de façon satisfaisante les besoins.
+// Même dans ce cas, d’autres produits peuvent souvent être utilisés comme base
+// de développement ou sources d’inspiration.
+…
+
+=== Budget et horizon de réalisation
+// Attentes, limites, contraintes, retour sur investissement.
+…
+endif::glogus_complet[]
+
+== Exemples d’utilisation
+// La présente section est facultative.
+// Elle réunit des exemples rédigés du point de vue du client.
+// Ce sont en quelque sorte des « histoires de cas » au sens qu’on leur
+// donne dans le procédé Scrum.
+// Ils servent souvent de base à de futurs cas d’utilisation.
+// En général, ils ne sont ni exhaustifs ni complets, mais représentent la vision
+// concrète a priori du produit à être développé, du service à être rendu, etc.
+// Dans un projet d’évolution de système (logiciel, application), ces exemples
+// devraient être dans le DDV.
+// Dans un projet de création, ils seront le plus souvent dans le mandat (MPS),
+// donc, dans les deux cas, disponibles nettement avant l’approbation de la SES
+// (et en fait au début de l’élaboration de celle-ci).
+// Toutefois, dans la pratique, il arrive souvent que le client les omette complètement.
+// Il en découle que les exemples sont souvent rédigés par le fournisseur et
+// inclus dans le MPS pour les projets d’évolution et dans une version préliminaire
+// de la SES pour les projets de création.
+//
+// LL01 : ce sont des exemples d’utilisation conditionnés par la seule vision.
+//        Les fonctionnalités et services ne pourront être définis qu’en regard
+//        du modèle et des exigences.
+//        Il est donc souvent difficile de les décrire sans être ni trivial
+//        ni surspécifique.
+
+=== Cas 1
+…
+
+=== Cas 2
+…
+
+== Planification envisagée
+// La présente section est facultative.
+// Elle recense les principales étapes envisagées, leurs jalons, leurs dépendances
+// et leurs intrants et leurs extrants en les liant si possible au calendrier
+// organisationnel.
+//
+// Typiquement, une table des jalons majeurs est souhaitable
+…
+
+=== Ressources
+…
+
+=== Programme
+…
+
+// <<<
+[conclusion]
+== Conclusion
+…
+
+ifndef::format_DIAPO[]
+ifdef::glogus_glossaire[]
+<<<
+[glosssary]
+== Définitions
+include::{rep_Scriptorum}/doc/_glo/_préambule.adoc[]
+
+*_À développer_*
+
+include::{rep_Scriptorum}/doc/_glo/connaissance.adoc[]
+include::{rep_Scriptorum}/doc/_glo/épistémologie.adoc[]
+include::{rep_Scriptorum}/doc/_glo/éthique.adoc[]
+include::{rep_Scriptorum}/doc/_glo/philosophie.adoc[]
+include::{rep_Scriptorum}/doc/_glo/science.adoc[]
+endif::glogus_glossaire[]
+
+<<<
+[glosssary]
+== Sigles
+
+*_À développer_*
+
+include::{rep_Scriptorum}/doc/_glo/SGBD.adoc[]
+include::{rep_Scriptorum}/doc/_glo/SGBDR.adoc[]
+include::{rep_Scriptorum}/doc/_glo/SQL.adoc[]
+endif::format_DIAPO[]
+
+// <<<
+[bibliography]
+== Références
+
+include::{rep_Scriptorum}/doc/_ref/Codd1970a.adoc[]
+include::{rep_Scriptorum}/doc/_ref/Codd1990a.adoc[]
+include::{rep_Scriptorum}/doc/_ref/Date1998a.adoc[]
+include::{rep_Scriptorum}/doc/_ref/Date2020a.adoc[]
+include::{rep_Scriptorum}/doc/_ref/Elmasri2016.adoc[]
+include::{rep_Scriptorum}/doc/_ref/Russell1908a.adoc[]
+
+[.small]#Collections du Musée national des beaux-arts du Québec#::
+[.small]#Données Québec (consulté le 2024-08-31) +
+https://www.donneesquebec.ca/recherche/dataset/collections-du-musee-national-des-beaux-arts-du-quebec#
+
+[.small]#Collection du Musée d’art de Rouyn-Noranda#::
+[.small]#Données Québec (consulté le 2024-08-31) +
+https://www.donneesquebec.ca/recherche/dataset/regionalite-de-la-collection-musee-d-art-de-rouyn-noranda#
+
+[.small]#_Europeana Data Model_#::
+[.small]#Europeana Foundation (consulté le 2024-09-04) +
+https://pro.europeana.eu/page/edm-documentation +
+https://pro.europeana.eu/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_Definition_v5.2.8_102017.pdf#
+
+// Colophon du document
+ifdef::format_DIAPO[include::{rep_format}/DIAPO_en-pied.adoc[]]
+ifndef::format_DIAPO[include::{rep_format}/{format_effectif}_en-pied.adoc[]]
