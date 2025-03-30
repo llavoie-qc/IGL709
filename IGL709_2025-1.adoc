@@ -1,50 +1,80 @@
 == IGL709
 Sujets choisis en génie logiciel
 
-=== Ingénierie des exigences [12 h]
-* Processus+modèles : DC+DFD
-* OO
-* User
-* Jackson
-* x Ontologies
-* x Méthodes formelles
-* Procédés : Comité, OOD,  ABT
+=== Modalités 
 
-=== Gestion des artéfacts (organiser une visite) [4 h]
-* Versions vs Configurations
-* Logiciel vs données vs hybride
-* migration
-* déploiement
+==== Intitialement prévues
+* cours  24 : 12 x 2 heures (en séminaire collectif)
+* étude  36 : 12 x 3 heures (individuel)
+* projet 75 à 90     heures (en équipe)
 
-=== Gestion des essais et des revues [8 h]
-* vérification vs validation
-* tests vs essais
-* type : unitaires, intégration, système
-* non-réregression
-* mode : itération, livraison, récption, pré-déploiement, déploiement
-* intégration continue
-* livraison continue
-
-=== Modalités
-* cours  24 : 12 x 2 heures (collectif)
-* étude  36 : 12 x 3 heures (collectif)
-* projet 75 à 90     heures (individuel)
+==== Révisées
+* cours  12 : 6 x 2 heures (en séminaire collectif) [v]
+* étude  18 : 6 x 3 heures (individuel)             [?]
+* suivi   6 : 6 x 1 heures (en équipe)              [v]
+* projet
+  - rencontre client  9 : 6 x 1,5 heures (en équipe)
+  - réalisation      90           heures (en équipe)
 
 L’évaluation portera essentiellement sur le projet et sa présentation orale
 (30 minutes chacun).
 
+=== Modules
 
-== Modules non retenus
-
-=== Gestion de projet
+==== Gestion de projet
+.Couverts
 * Cycles de vie : de l'avant-projet à la réalisation, l'évolution et le retrait
 * Gestion de produit : l'anticipation, le changement, etc.
-* Gestion de projet : la base, les vagues, etc.
 * Procédés (itératif, RUP, V, XP, agile, Kanban)
-* La spirale, première manière, deuxième et troisième
+* La spirale, première manière
+
+.Non couverts
+* La spirale, deuxième et troisième manières
+* Gestion de projet : la base, les vagues, etc.
 * Évaluation vs Estimation : (paramétrique, Cocomo, FP...)
-* PMBoK vs Claude
+* PMBoK vs Prince 2
 * Gestion du changement
 * Gestion de risque
 
+==== Modélisation
+.Couverts
+* Procédés+modèles
+  - centré processus : DC+DFD
+  - centré OO
+  - centré User
+ 
+.Non ouverts
+* Procédés+modèles
+  - Jackson
+  - Ontologies
+  - Méthodes formelles
+
+==== Gestion des artéfacts, des essais et des revues
+
+.Couverts
+* Procédé : démarrage, itération, livraison, réception, pré-déploiement, déploiement
+* Revue
+* Intégration continue
+* Visite au laboratoire et  présentation de son infrastructure de développement
+
+.Non couverts
+* Version vs configuration
+* Vérification vs validation
+* Tests vs essais
+* Type de tests : unitaires, intégration, système, non-régression
+* Livraison continue
+* Spécificités : logiciel vs données vs hybride
+  - Développement
+  - Documentation
+  - Migration
+  - Déploiement
+
+==== Architecture
+Non couvert
+
+==== Ingénieries des exigences
+Non couvert
+
+==== Conception d'IPM
+Non couvert
 
